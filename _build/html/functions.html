@@ -1,0 +1,1010 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions &#8212; MAP-Elites for Architecture</title>
+    
+  <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.30270b6e4c972e43c488.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Classes" href="classes.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">MAP-Elites for Architecture</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="introduction.html">
+   Overview
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Reference.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Reference.html#archelites-basics">
+   ArchElites Basics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Workflow
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow.html">
+   Running an experiment
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Source
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="classes.html">
+   Classes
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Functions
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/functions.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-path">
+   create_path
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-shapely-polygons">
+   create_shapely_polygons
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#find-intersections">
+   find_intersections
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#centroids">
+   centroids
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#get-features">
+   get_features
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wind-comfort">
+   wind_comfort
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#run-inference">
+   run_inference
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#genetic-similarity">
+   genetic_similarity
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#diverse-pairs">
+   diverse_pairs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-map">
+   create_map
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#height-to-color">
+   height_to_color
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#draw-polygons">
+   draw_polygons
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plot-heatmap">
+   plot_heatmap
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#crossover">
+   crossover
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fi-crossover">
+   fi_crossover
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#polynomial-bounded-mutation">
+   polynomial_bounded_mutation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#crossover-mutation">
+   crossover_mutation
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="functions">
+<h1>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="create-path">
+<h2>create_path<a class="headerlink" href="#create-path" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_path</span><span class="p">(</span><span class="n">polygon</span><span class="p">):</span>
+	<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	A function that splits a series of polygon points into an (x, y) array of</span>
+<span class="sd">	coordinates.</span>
+<span class="sd">	</span>
+<span class="sd">	:param polygon: A polygon (i.e. array of x, y sequences) creates by a design</span>
+<span class="sd">	software or extracted from a geometry file.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+	
+	<span class="n">x_coords</span> <span class="o">=</span> <span class="n">polygon</span><span class="p">[</span><span class="mi">0</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span>
+	<span class="n">y_coords</span> <span class="o">=</span> <span class="n">polygon</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span>
+
+	<span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">x_coords</span><span class="p">,</span> <span class="n">y_coords</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-shapely-polygons">
+<h2>create_shapely_polygons<a class="headerlink" href="#create-shapely-polygons" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_shapely_polygons</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">splits</span><span class="p">):</span>
+	<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	A function that generates shapely polygons out of points and splits (indices</span>
+<span class="sd">	on where to split the points) of each individual.</span>
+<span class="sd">	</span>
+<span class="sd">	:param points: a list of points for each individual.</span>
+<span class="sd">	:param splits: a list of indices that show where to split the point list in</span>
+<span class="sd">	order to create individual polygons.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+	
+	<span class="n">polygons</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">vsplit</span><span class="p">(</span><span class="n">points</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">splits</span><span class="p">)))[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+	<span class="n">shapes</span> <span class="o">=</span> <span class="p">[]</span>
+	<span class="k">for</span> <span class="n">poly</span> <span class="ow">in</span> <span class="n">polygons</span><span class="p">:</span>
+		<span class="n">path</span> <span class="o">=</span> <span class="n">create_path</span><span class="p">(</span><span class="n">poly</span><span class="p">)</span>
+		<span class="n">shapes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Polygon</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
+
+	<span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">shapes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="find-intersections">
+<h2>find_intersections<a class="headerlink" href="#find-intersections" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_intersections</span><span class="p">(</span><span class="n">seed_polygon</span><span class="p">,</span> <span class="n">target_polygons</span><span class="p">):</span>
+	<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	A function that finds intersections between a seed polygon and a list of</span>
+<span class="sd">	candidate polygons.</span>
+<span class="sd">	</span>
+<span class="sd">	:param seed_polygon: A shapely polygon.</span>
+<span class="sd">	:param target_polygons: A collection of shapely polygons.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+	
+	<span class="n">intersect_booleans</span> <span class="o">=</span> <span class="p">[]</span>
+	<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">poly</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">target_polygons</span><span class="p">):</span>
+		<span class="n">intersect_booleans</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">seed_polygon</span><span class="o">.</span><span class="n">intersects</span><span class="p">(</span><span class="n">poly</span><span class="p">))</span>
+
+	<span class="k">return</span> <span class="n">intersect_booleans</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="centroids">
+<h2>centroids<a class="headerlink" href="#centroids" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">centroids</span><span class="p">(</span><span class="n">polygons</span><span class="p">):</span>
+	<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	A function that calculates the centroids of a collection of shapely polygons.</span>
+<span class="sd">	</span>
+<span class="sd">	:param polygons: A collection of shapely polygons.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+	
+	<span class="n">centroids</span> <span class="o">=</span> <span class="p">[]</span>
+	<span class="k">for</span> <span class="n">polygon</span> <span class="ow">in</span> <span class="n">polygons</span><span class="p">:</span>
+		<span class="n">xy</span> <span class="o">=</span> <span class="n">polygon</span><span class="o">.</span><span class="n">centroid</span><span class="o">.</span><span class="n">xy</span>
+		<span class="n">coords</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dstack</span><span class="p">((</span><span class="n">xy</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">xy</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+		<span class="n">centroids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">coords</span><span class="p">)</span>
+
+	<span class="k">return</span> <span class="n">centroids</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="get-features">
+<h2>get_features<a class="headerlink" href="#get-features" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_features</span><span class="p">(</span><span class="n">footprints</span><span class="p">,</span> <span class="n">heights</span><span class="p">,</span> <span class="n">boundary</span><span class="o">=</span><span class="p">(</span><span class="mi">512</span><span class="p">,</span> <span class="mi">512</span><span class="p">),</span> <span class="n">b_color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">):</span>
+	<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	Calculates urban features for a set of footprints and heights. Features</span>
+<span class="sd">	include:</span>
+<span class="sd">	floor space index (FSI): gross floor area / area of aggregation</span>
+<span class="sd">	ground space index (GSI): footprint / area of aggregation</span>
+<span class="sd">	oper space ratio (OSR): (1-GSI)/FSI</span>
+<span class="sd">	building height (L): FSI/GSI</span>
+<span class="sd">	tare (T): (area of aggregation - footprint) / area of aggregation</span>
+<span class="sd">	</span>
+<span class="sd">	:param footprints: list of areas for each building of an individual</span>
+<span class="sd">	:param heights: list of heights for each building of an individual</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+	
+	<span class="c1">#calculate aggregation A</span>
+	<span class="n">area_of_aggregation</span> <span class="o">=</span> <span class="n">boundary</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">boundary</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+	<span class="c1">#calculate GFA</span>
+	<span class="n">gross_floor_area</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">footprints</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">heights</span><span class="o">/</span><span class="mi">4</span><span class="p">))</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+	<span class="n">total_footprint</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">footprints</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+	<span class="n">fsi</span> <span class="o">=</span> <span class="n">gross_floor_area</span> <span class="o">/</span> <span class="n">area_of_aggregation</span>
+	<span class="n">gsi</span> <span class="o">=</span> <span class="n">total_footprint</span> <span class="o">/</span> <span class="n">area_of_aggregation</span>
+	<span class="n">osr</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">gsi</span><span class="p">)</span> <span class="o">/</span> <span class="n">fsi</span>
+	<span class="n">mean_height</span> <span class="o">=</span> <span class="n">fsi</span> <span class="o">/</span> <span class="n">gsi</span>
+	<span class="n">tare</span> <span class="o">=</span> <span class="p">(</span><span class="n">area_of_aggregation</span> <span class="o">-</span> <span class="n">total_footprint</span><span class="p">)</span> <span class="o">/</span> <span class="n">area_of_aggregation</span>
+
+	<span class="k">return</span> <span class="n">fsi</span><span class="p">,</span> <span class="n">gsi</span><span class="p">,</span> <span class="n">osr</span><span class="p">,</span> <span class="n">mean_height</span><span class="p">,</span> <span class="n">tare</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="wind-comfort">
+<h2>wind_comfort<a class="headerlink" href="#wind-comfort" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">wind_comfort</span><span class="p">(</span><span class="n">experiment_folder</span><span class="p">):</span>
+	<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	A function that calculates fitness values for the individuals that were just</span>
+<span class="sd">    infereced by the pretrained model. Note: hardcoded for now in the server code.</span>
+<span class="sd">    </span>
+<span class="sd">	:param experiment_folder: The folder where the inference data is saved in.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+
+	<span class="c1">#get inference data from the experiment folder</span>
+	<span class="n">lawson_results</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">experiment_folder</span> <span class="o">+</span> <span class="s1">&#39;/lawson*.npy&#39;</span><span class="p">)</span>
+	<span class="n">total_area</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">experiment_folder</span> <span class="o">+</span> <span class="s1">&#39;/area*.npy&#39;</span><span class="p">)</span>
+
+	<span class="n">lawson_sitting</span> <span class="o">=</span> <span class="p">[]</span>
+	<span class="n">lawson_dangerous</span> <span class="o">=</span> <span class="p">[]</span>
+
+	<span class="k">for</span> <span class="n">result</span><span class="p">,</span> <span class="n">area</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">lawson_results</span><span class="p">,</span> <span class="n">total_area</span><span class="p">):</span>
+
+		<span class="n">lawson</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+		<span class="n">area</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">area</span><span class="p">)</span>
+
+		<span class="n">unique</span><span class="p">,</span> <span class="n">counts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">lawson</span><span class="p">,</span> <span class="n">return_counts</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+		<span class="k">try</span><span class="p">:</span>
+            <span class="c1">#turn 512 x 512 to 250 x 250</span>
+			<span class="n">sitting</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">counts</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">unique</span><span class="o">&lt;=</span><span class="mi">2</span><span class="p">)[</span><span class="mi">0</span><span class="p">]])</span><span class="o">/</span><span class="mf">4.2</span> 
+		<span class="k">except</span><span class="p">:</span>
+			<span class="n">sitting</span> <span class="o">=</span> <span class="mi">0</span>
+
+		<span class="k">try</span><span class="p">:</span>
+            <span class="c1">#turn 512 x 512 to 250 x 250</span>
+			<span class="n">dangerous</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">counts</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">unique</span><span class="o">&gt;=</span><span class="mi">4</span><span class="p">)[</span><span class="mi">0</span><span class="p">]])</span><span class="o">/</span><span class="mf">4.2</span>
+		<span class="k">except</span><span class="p">:</span>
+			<span class="n">dangerous</span> <span class="o">=</span> <span class="mi">0</span>
+
+		<span class="n">sitting_percentage</span> <span class="o">=</span> <span class="p">(</span><span class="n">sitting</span> <span class="o">/</span> <span class="n">area</span><span class="o">.</span><span class="n">item</span><span class="p">())</span> <span class="o">*</span> <span class="mi">100</span>
+		<span class="n">dangerous_percentage</span> <span class="o">=</span> <span class="p">(</span><span class="n">dangerous</span> <span class="o">/</span> <span class="n">area</span><span class="o">.</span><span class="n">item</span><span class="p">())</span> <span class="o">*</span> <span class="mi">100</span>
+
+	<span class="k">return</span> <span class="n">sitting_percentage</span><span class="p">,</span> <span class="n">dangerous_percentage</span><span class="p">,</span> <span class="n">sitting</span><span class="p">,</span> <span class="n">dangerous</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="run-inference">
+<h2>run_inference<a class="headerlink" href="#run-inference" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">run_inf</span><span class="p">(</span><span class="n">port</span><span class="o">=</span><span class="mi">5559</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
+	<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	Function to run inference on the local server where the pretrained model is</span>
+<span class="sd">    running.</span>
+<span class="sd">    </span>
+<span class="sd">	:param port: The port through which the communication with the model happens.</span>
+<span class="sd">	:param host: The local address of the server.</span>
+<span class="sd">	:param timeout: A specified amount of time to wait for a response from the </span>
+<span class="sd">	server before closing.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+	
+	<span class="c1"># Connect to server</span>
+	<span class="c1">#print(&quot;Connecting to server...&quot;)</span>
+
+	<span class="k">with</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span> <span class="k">as</span> <span class="n">s</span><span class="p">:</span>
+		<span class="n">s</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="n">host</span><span class="p">,</span><span class="n">port</span><span class="p">))</span>
+
+		<span class="n">s</span><span class="o">.</span><span class="n">sendall</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;run model!&#39;</span><span class="p">)</span>
+
+		<span class="c1">#send message to server</span>
+		<span class="c1">#print(f&#39;Sending request...&#39;)</span>
+
+		<span class="n">data</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span>
+		<span class="c1">#print (data)</span>
+		<span class="n">server_msg_</span> <span class="o">=</span> <span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="genetic-similarity">
+<h2>genetic_similarity<a class="headerlink" href="#genetic-similarity" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">genetic_similarity</span><span class="p">(</span><span class="n">ind_files</span><span class="p">,</span> <span class="n">n_genes</span><span class="p">):</span>
+	<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	Calculates similarity between individuals created in Grasshopper, using</span>
+<span class="sd">	information (input parameters) saved in each individual&#39;s name convention.</span>
+<span class="sd">	</span>
+<span class="sd">	:param ind_files: A Collection of individuals generated through grasshopper.</span>
+<span class="sd">	:param n_genes: The total number of parameters in the Grasshopper parametric</span>
+<span class="sd">	model.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+	
+	<span class="n">genomes</span> <span class="o">=</span> <span class="p">[]</span>
+	<span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">ind_files</span><span class="p">:</span>
+		<span class="n">genomes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)[:</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">])</span>
+
+	<span class="n">genome</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">genomes</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_genes</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+	<span class="n">similarity</span> <span class="o">=</span> <span class="n">cosine_similarity</span><span class="p">(</span><span class="n">genomes</span><span class="p">)</span>
+
+	<span class="k">return</span> <span class="n">similarity</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="diverse-pairs">
+<h2>diverse_pairs<a class="headerlink" href="#diverse-pairs" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">diverse_pairs</span><span class="p">(</span><span class="n">similarity_matrix</span><span class="p">,</span> <span class="n">n_pairs</span><span class="p">):</span>
+	<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	A function to find the indices of a specified number of individuals, for each</span>
+<span class="sd">	parent, which are as different as possible from the parent, based on their</span>
+<span class="sd">	genetic similarity.</span>
+<span class="sd">	</span>
+<span class="sd">	:param similarity_matrix: The similarity matrix computed for all individuals.</span>
+<span class="sd">	:param n_pairs: The number of most dissimilar individuals to find for each</span>
+<span class="sd">	parent.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+	
+	<span class="n">diverse_pairs</span> <span class="o">=</span> <span class="p">[]</span>
+	<span class="k">for</span> <span class="n">ind</span> <span class="ow">in</span> <span class="n">similarity_matrix</span><span class="p">:</span>
+		<span class="n">diverse_pairs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">argpartition</span><span class="p">(</span><span class="n">ind</span><span class="p">,</span> <span class="n">n_pairs</span><span class="p">)[:</span><span class="n">n_pairs</span><span class="p">])</span>
+
+	<span class="k">return</span> <span class="n">diverse_pairs</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-map">
+<h2>create_map<a class="headerlink" href="#create-map" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_cmap</span><span class="p">(</span><span class="n">color_file</span><span class="p">):</span>
+	<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	Creates an RGB color map out of a list of color values.</span>
+<span class="sd">	</span>
+<span class="sd">	:param color_file: A csv file of the color gradient used to generate the</span>
+<span class="sd">	heightmaps.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+	
+	<span class="n">colors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">color_file</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
+	<span class="n">cmap</span> <span class="o">=</span> <span class="p">[]</span>
+	<span class="k">for</span> <span class="n">color</span> <span class="ow">in</span> <span class="n">colors</span><span class="p">:</span>
+		<span class="n">cmap</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">color</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+
+	<span class="n">cmap</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">cmap</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+
+	<span class="k">return</span> <span class="n">cmap</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="height-to-color">
+<h2>height_to_color<a class="headerlink" href="#height-to-color" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">height_to_color</span><span class="p">(</span><span class="n">cmap</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+	<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	Translates a building height value to a color, based on the given color map.</span>
+<span class="sd">	</span>
+<span class="sd">	:param cmap: A color map.</span>
+<span class="sd">	:param height: A building height</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+	
+	<span class="k">if</span><span class="p">(</span><span class="n">height</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">cmap</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+		<span class="n">color_value</span> <span class="o">=</span> <span class="mi">0</span>
+	<span class="k">else</span><span class="p">:</span>
+		<span class="n">modulo</span> <span class="o">=</span> <span class="n">height</span> <span class="o">%</span> <span class="mi">1</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">modulo</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+			<span class="n">color_value</span> <span class="o">=</span> <span class="n">cmap</span><span class="p">[</span><span class="n">height</span><span class="p">]</span>
+		<span class="k">else</span><span class="p">:</span>
+			<span class="n">minimum</span> <span class="o">=</span> <span class="n">floor</span><span class="p">(</span><span class="n">height</span><span class="p">)</span>
+			<span class="n">maximum</span> <span class="o">=</span> <span class="n">ceil</span><span class="p">(</span><span class="n">height</span><span class="p">)</span>
+
+			<span class="n">min_color</span> <span class="o">=</span> <span class="n">cmap</span><span class="p">[</span><span class="n">minimum</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+			<span class="n">max_color</span> <span class="o">=</span> <span class="n">cmap</span><span class="p">[</span><span class="n">maximum</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+
+			<span class="n">color_value</span> <span class="o">=</span> <span class="n">min_color</span> <span class="o">+</span> <span class="p">((</span><span class="n">min_color</span><span class="o">-</span><span class="n">max_color</span><span class="p">)</span> <span class="o">*</span> <span class="n">modulo</span><span class="p">)</span>
+
+	<span class="k">return</span> <span class="p">[</span><span class="n">color_value</span><span class="p">,</span> <span class="n">color_value</span><span class="p">,</span> <span class="n">color_value</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="draw-polygons">
+<h2>draw_polygons<a class="headerlink" href="#draw-polygons" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">draw_polygons</span><span class="p">(</span><span class="n">polygons</span><span class="p">,</span> <span class="n">colors</span><span class="p">,</span> <span class="n">im_size</span><span class="o">=</span><span class="p">(</span><span class="mi">512</span><span class="p">,</span> <span class="mi">512</span><span class="p">),</span> <span class="n">b_color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">fpath</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+	<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	A function that draws a PIL image of a collection of polygons and colors.</span>
+<span class="sd">	</span>
+<span class="sd">	:param polygons: A list of shapely polygons.</span>
+<span class="sd">	:param colors: A list of R, G, B values for each polygon.</span>
+<span class="sd">	:param im_size: The size of the input geometry.</span>
+<span class="sd">	:param b_color: The color of the image background.</span>
+<span class="sd">	:param fpath: The file path to use if saving the image to disk.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+	
+	<span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">&quot;RGB&quot;</span><span class="p">,</span> <span class="n">im_size</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">b_color</span><span class="p">)</span>
+	<span class="n">draw</span> <span class="o">=</span> <span class="n">aggdraw</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+
+	<span class="k">for</span> <span class="n">poly</span><span class="p">,</span> <span class="n">color</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">polygons</span><span class="p">,</span> <span class="n">colors</span><span class="p">):</span>
+		<span class="c1"># get x, y sequence of coordinates for each polygon</span>
+		<span class="n">xy</span> <span class="o">=</span> <span class="n">poly</span><span class="o">.</span><span class="n">exterior</span><span class="o">.</span><span class="n">xy</span>
+		<span class="n">coords</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dstack</span><span class="p">((</span><span class="n">xy</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">xy</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+		<span class="c1"># create a brush according to each polygon color</span>
+		<span class="n">brush</span> <span class="o">=</span> <span class="n">aggdraw</span><span class="o">.</span><span class="n">Brush</span><span class="p">((</span><span class="n">color</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="p">[</span><span class="mi">2</span><span class="p">]),</span> <span class="n">opacity</span><span class="o">=</span><span class="mi">255</span><span class="p">)</span>
+		<span class="c1"># draw the colored polygon on the draw object</span>
+		<span class="n">draw</span><span class="o">.</span><span class="n">polygon</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="n">brush</span><span class="p">)</span>
+
+	<span class="c1">#create a PIL image out of the aggdraw object</span>
+	<span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">frombytes</span><span class="p">(</span><span class="s2">&quot;RGB&quot;</span><span class="p">,</span> <span class="n">im_size</span><span class="p">,</span> <span class="n">draw</span><span class="o">.</span><span class="n">tobytes</span><span class="p">())</span>
+
+	<span class="k">if</span><span class="p">(</span><span class="n">fpath</span><span class="p">):</span>
+		<span class="n">image</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">fpath</span><span class="p">)</span>
+
+	<span class="k">return</span> <span class="n">draw</span><span class="p">,</span> <span class="n">image</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="plot-heatmap">
+<h2>plot_heatmap<a class="headerlink" href="#plot-heatmap" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">too</span> <span class="n">hacky</span> <span class="n">to</span> <span class="n">share</span><span class="p">,</span> <span class="n">TBD</span> <span class="p">:</span><span class="n">D</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="crossover">
+<h2>crossover<a class="headerlink" href="#crossover" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">crossover</span><span class="p">(</span><span class="n">ind1</span><span class="p">,</span> <span class="n">ind2</span><span class="p">,</span> <span class="n">indgen</span><span class="p">,</span> <span class="n">indprob</span><span class="p">,</span> <span class="n">parent_ids</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+	<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	Executes an initialization of the population within a collection by creating an individual from two</span>
+<span class="sd">	provided individuals. The buildings are selected from ind1 according to the	*indpb* probability, while</span>
+<span class="sd">	*indgen* defines how much genetic material will be used from ind1.</span>
+
+<span class="sd">	:param ind1: The first individual participating in the crossover.</span>
+<span class="sd">	:param ind2: The second individual participating in the crossover.</span>
+<span class="sd">	:param indgen: The minimum amount of genetic material to be taken from</span>
+<span class="sd">	ind1.</span>
+<span class="sd">	:param indpb: Independent probability for each building polygon to be kept.</span>
+<span class="sd">	:returns: A tuple of two individuals.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+
+	<span class="c1"># get geometry information from individuals</span>
+	<span class="n">heights1</span><span class="p">,</span> <span class="n">polygons1</span><span class="p">,</span> <span class="n">colors1</span><span class="p">,</span> <span class="n">centroids1</span><span class="p">,</span> <span class="n">size1</span> <span class="o">=</span> <span class="n">ind1</span><span class="o">.</span><span class="n">heights</span><span class="p">,</span> <span class="n">ind1</span><span class="o">.</span><span class="n">polygons</span><span class="p">,</span> <span class="n">ind1</span><span class="o">.</span><span class="n">colors</span><span class="p">,</span> <span class="n">ind1</span><span class="o">.</span><span class="n">centroids</span><span class="p">,</span> <span class="n">ind1</span><span class="o">.</span><span class="n">size</span>
+	<span class="n">heights2</span><span class="p">,</span> <span class="n">polygons2</span><span class="p">,</span> <span class="n">colors2</span><span class="p">,</span> <span class="n">centroids2</span><span class="p">,</span> <span class="n">size2</span> <span class="o">=</span> <span class="n">ind2</span><span class="o">.</span><span class="n">heights</span><span class="p">,</span> <span class="n">ind2</span><span class="o">.</span><span class="n">polygons</span><span class="p">,</span> <span class="n">ind2</span><span class="o">.</span><span class="n">colors</span><span class="p">,</span> <span class="n">ind2</span><span class="o">.</span><span class="n">centroids</span><span class="p">,</span> <span class="n">ind2</span><span class="o">.</span><span class="n">size</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">verbose</span><span class="p">):</span>
+		<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Individual 1 has </span><span class="si">{}</span><span class="s2"> buildings&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">polygons1</span><span class="p">)))</span>
+		<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Individual 2 has </span><span class="si">{}</span><span class="s2"> buildings&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">polygons2</span><span class="p">)))</span>
+
+	<span class="c1">#keep a minimum amount of genetic material from parent 1, according to indgen</span>
+
+	<span class="n">selection</span> <span class="o">=</span> <span class="p">[]</span>
+
+	<span class="c1">#some hacky stuff to avoid weird or failed crossover when individuals have only a few buildings</span>
+	<span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">polygons2</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">4</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">polygons1</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">):</span>
+
+		<span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">polygons1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">4</span><span class="p">):</span>
+			<span class="n">poly_ids</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">polygons1</span><span class="p">))),</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">polygons1</span><span class="p">)</span> <span class="o">*</span> <span class="n">indgen</span><span class="p">))</span>
+		<span class="k">else</span><span class="p">:</span>
+			<span class="n">poly_ids</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">polygons1</span><span class="p">))]</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">verbose</span><span class="p">):</span>
+			<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;total selected buildings from individual 1: </span><span class="si">{}</span><span class="s1"> out of </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">poly_ids</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">polygons1</span><span class="p">)))</span>
+
+		<span class="n">p1</span> <span class="o">=</span> <span class="n">polygons1</span><span class="p">[</span><span class="n">poly_ids</span><span class="p">]</span>
+		<span class="n">hts1_</span> <span class="o">=</span> <span class="n">heights1</span><span class="p">[</span><span class="n">poly_ids</span><span class="p">]</span>
+		<span class="n">centroids1_</span> <span class="o">=</span> <span class="n">centroids1</span><span class="p">[</span><span class="n">poly_ids</span><span class="p">]</span>
+		<span class="n">colors1_</span> <span class="o">=</span> <span class="n">colors1</span><span class="p">[</span><span class="n">poly_ids</span><span class="p">]</span>
+		<span class="k">assert</span> <span class="n">p1</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">hts1_</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">centroids1_</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">colors1_</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+		<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">hts1_</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+		<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">centroids1_</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">colors1_</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+		<span class="n">intersection_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">p1</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">len</span><span class="p">(</span><span class="n">polygons2</span><span class="p">)))</span>
+		<span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">p1</span><span class="p">):</span>
+			<span class="n">intersection_matrix</span><span class="p">[</span><span class="n">k</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">geom</span><span class="o">.</span><span class="n">find_intersections</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">polygons2</span><span class="p">)</span>
+		<span class="n">bools</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">intersection_matrix</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">bool</span><span class="p">)</span>
+		<span class="n">mask</span> <span class="o">=</span> <span class="o">~</span><span class="n">bools</span>
+
+		<span class="n">p2</span> <span class="o">=</span> <span class="n">polygons2</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+		<span class="n">hts2_</span> <span class="o">=</span> <span class="n">heights2</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+		<span class="n">colors2_</span> <span class="o">=</span> <span class="n">colors2</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+		<span class="k">assert</span> <span class="n">p2</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">hts2_</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">colors2_</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+		<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">p2</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">hts2_</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+		<span class="c1">#join polygons from both parents and assign colors</span>
+		<span class="n">polygons_cross</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">))</span>
+		<span class="n">colors_cross</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">colors1_</span><span class="p">,</span> <span class="n">colors2_</span><span class="p">))</span>
+		<span class="n">heights_cross</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">hts1_</span><span class="p">,</span> <span class="n">hts2_</span><span class="p">))</span>
+		<span class="k">assert</span> <span class="n">polygons_cross</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">colors_cross</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">heights_cross</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">verbose</span><span class="p">):</span>
+			<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> buildings present in offspring&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">polygons_cross</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+		<span class="n">offspring</span> <span class="o">=</span> <span class="n">Offspring</span><span class="p">(</span><span class="n">polygons_cross</span><span class="p">,</span> <span class="n">colors_cross</span><span class="p">,</span> <span class="n">heights_cross</span><span class="p">,</span> <span class="n">size1</span><span class="p">,</span> <span class="n">parent_ids</span><span class="p">)</span>
+	<span class="k">else</span><span class="p">:</span>
+		<span class="n">poly_ids</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">polygons1</span><span class="p">))),</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">polygons1</span><span class="p">)</span> <span class="o">*</span> <span class="n">indgen</span><span class="p">))</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">verbose</span><span class="p">):</span>
+			<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;total selected buildings from individual 1: </span><span class="si">{}</span><span class="s1"> out of </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">poly_ids</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">polygons1</span><span class="p">)))</span>
+
+		<span class="c1"># keep only selected buildings from the first individual and throw away all intersecting</span>
+		<span class="c1"># building from the second individual</span>
+		<span class="n">p1</span> <span class="o">=</span> <span class="n">polygons1</span><span class="p">[</span><span class="n">poly_ids</span><span class="p">]</span>
+		<span class="n">hts1_</span> <span class="o">=</span> <span class="n">heights1</span><span class="p">[</span><span class="n">poly_ids</span><span class="p">]</span>
+		<span class="n">centroids1_</span> <span class="o">=</span> <span class="n">centroids1</span><span class="p">[</span><span class="n">poly_ids</span><span class="p">]</span>
+		<span class="n">colors1_</span> <span class="o">=</span> <span class="n">colors1</span><span class="p">[</span><span class="n">poly_ids</span><span class="p">]</span>
+		<span class="k">assert</span> <span class="n">p1</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">hts1_</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">centroids1_</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">colors1_</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+		<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">hts1_</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+		<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">centroids1_</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">colors1_</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+		<span class="c1">#find intersections for each polygon selected in p1</span>
+		<span class="n">intersection_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">p1</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">len</span><span class="p">(</span><span class="n">polygons2</span><span class="p">)))</span>
+		<span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">p1</span><span class="p">):</span>
+			<span class="n">intersection_matrix</span><span class="p">[</span><span class="n">k</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">geom</span><span class="o">.</span><span class="n">find_intersections</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">polygons2</span><span class="p">)</span>
+		<span class="n">bools</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">intersection_matrix</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">bool</span><span class="p">)</span>
+		<span class="n">mask</span> <span class="o">=</span> <span class="o">~</span><span class="n">bools</span>
+
+		<span class="n">p2</span> <span class="o">=</span> <span class="n">polygons2</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+		<span class="n">hts2_</span> <span class="o">=</span> <span class="n">heights2</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+		<span class="n">colors2_</span> <span class="o">=</span> <span class="n">colors2</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+		<span class="k">assert</span> <span class="n">p2</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">hts2_</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">colors2_</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+		<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">p2</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">hts2_</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+		<span class="c1">#join polygons from both parents and assign colors</span>
+		<span class="n">polygons_cross</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">))</span>
+		<span class="n">colors_cross</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">colors1_</span><span class="p">,</span> <span class="n">colors2_</span><span class="p">))</span>
+		<span class="n">heights_cross</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">hts1_</span><span class="p">,</span> <span class="n">hts2_</span><span class="p">))</span>
+		<span class="k">assert</span> <span class="n">polygons_cross</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">colors_cross</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">heights_cross</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">verbose</span><span class="p">):</span>
+			<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> buildings present in offspring&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">polygons_cross</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+		
+		<span class="n">offspring</span> <span class="o">=</span> <span class="n">Offspring</span><span class="p">(</span><span class="n">polygons_cross</span><span class="p">,</span> <span class="n">colors_cross</span><span class="p">,</span> <span class="n">heights_cross</span><span class="p">,</span> <span class="n">size1</span><span class="p">,</span> <span class="n">parent_ids</span><span class="p">)</span>
+
+	<span class="k">return</span> <span class="n">offspring</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="fi-crossover">
+<h2>fi_crossover<a class="headerlink" href="#fi-crossover" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">feasible_infeasible_crossover</span><span class="p">(</span><span class="n">ind1</span><span class="p">,</span> <span class="n">ind2</span><span class="p">,</span> <span class="n">indprob</span><span class="p">):</span>
+	<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">	Executes an FI crossover and calculates fitness with respect to infeasibility</span>
+
+<span class="sd">	:param ind1: The first individual participating in the crossover.</span>
+<span class="sd">	:param ind2: The second individual participating in the crossover.</span>
+<span class="sd">	:param indgen: The minimum amount of genetic material to be taken from</span>
+<span class="sd">	ind1.</span>
+<span class="sd">	:param indpb: Independent probability for each building polygon to be kept.</span>
+<span class="sd">	:returns: An individual.</span>
+<span class="sd">	&quot;&quot;&quot;</span>
+
+	<span class="c1"># get geometry information from individuals</span>
+	<span class="n">heights1</span><span class="p">,</span> <span class="n">polygons1</span><span class="p">,</span> <span class="n">colors1</span><span class="p">,</span> <span class="n">centroids1</span><span class="p">,</span> <span class="n">size1</span> <span class="o">=</span> <span class="n">ind1</span><span class="o">.</span><span class="n">heights</span><span class="p">,</span> <span class="n">ind1</span><span class="o">.</span><span class="n">polygons</span><span class="p">,</span> <span class="n">ind1</span><span class="o">.</span><span class="n">colors</span><span class="p">,</span> <span class="n">ind1</span><span class="o">.</span><span class="n">centroids</span><span class="p">,</span> <span class="n">ind1</span><span class="o">.</span><span class="n">size</span>
+	<span class="n">heights2</span><span class="p">,</span> <span class="n">polygons2</span><span class="p">,</span> <span class="n">colors2</span><span class="p">,</span> <span class="n">centroids2</span><span class="p">,</span> <span class="n">size2</span> <span class="o">=</span> <span class="n">ind2</span><span class="o">.</span><span class="n">heights</span><span class="p">,</span> <span class="n">ind2</span><span class="o">.</span><span class="n">polygons</span><span class="p">,</span> <span class="n">ind2</span><span class="o">.</span><span class="n">colors</span><span class="p">,</span> <span class="n">ind2</span><span class="o">.</span><span class="n">centroids</span><span class="p">,</span> <span class="n">ind2</span><span class="o">.</span><span class="n">size</span>
+	<span class="c1">#print(&quot;Individual 1 has {} buildings&quot;.format(len(polygons1)))</span>
+	<span class="c1">#print(&quot;Individual 2 has {} buildings&quot;.format(len(polygons2)))</span>
+
+	<span class="c1">#select from ind1</span>
+	<span class="n">probs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">polygons1</span><span class="p">))])</span>
+	<span class="n">selection</span> <span class="o">=</span> <span class="p">[</span><span class="n">probs</span> <span class="o">&lt;</span> <span class="n">indprob</span><span class="p">]</span>
+	<span class="n">poly_ids</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">polygons1</span><span class="p">))[</span><span class="nb">tuple</span><span class="p">(</span><span class="n">selection</span><span class="p">)]</span>
+	<span class="n">p1</span> <span class="o">=</span> <span class="n">polygons1</span><span class="p">[</span><span class="n">poly_ids</span><span class="p">]</span>
+	<span class="n">hts1_</span> <span class="o">=</span> <span class="n">heights1</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="n">poly_ids</span><span class="p">]</span>
+	<span class="n">centroids1_</span> <span class="o">=</span> <span class="n">centroids1</span><span class="p">[</span><span class="n">poly_ids</span><span class="p">]</span>
+	<span class="n">colors1_</span> <span class="o">=</span> <span class="n">colors1</span><span class="p">[</span><span class="n">poly_ids</span><span class="p">]</span>
+	<span class="k">assert</span> <span class="n">p1</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">hts1_</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">centroids1_</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">colors1_</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+	<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">p1</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">hts1_</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+	<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">centroids1_</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">colors1_</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+	<span class="c1">#select from ind2</span>
+	<span class="n">probs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">polygons2</span><span class="p">))])</span>
+	<span class="n">selection</span> <span class="o">=</span> <span class="p">[</span><span class="n">probs</span> <span class="o">&lt;</span> <span class="n">indprob</span><span class="p">]</span>
+	<span class="n">poly_ids</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">polygons2</span><span class="p">))[</span><span class="nb">tuple</span><span class="p">(</span><span class="n">selection</span><span class="p">)]</span>
+	<span class="n">p2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">polygons2</span><span class="p">)[</span><span class="n">poly_ids</span><span class="p">]</span>
+	<span class="n">hts2_</span> <span class="o">=</span> <span class="n">heights2</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="n">poly_ids</span><span class="p">]</span>
+	<span class="n">centroids2_</span> <span class="o">=</span> <span class="n">centroids2</span><span class="p">[</span><span class="n">poly_ids</span><span class="p">]</span>
+	<span class="n">colors2_</span> <span class="o">=</span> <span class="n">colors2</span><span class="p">[</span><span class="n">poly_ids</span><span class="p">]</span>
+	<span class="k">assert</span> <span class="n">p2</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">hts2_</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">centroids2_</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">colors2_</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+	<span class="c1"># join material from both individuals</span>
+	<span class="n">p_cross</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">((</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">))</span>
+	<span class="n">hts_cross</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">hts1_</span><span class="p">,</span> <span class="n">hts2_</span><span class="p">))</span>
+	<span class="n">colors_cross</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">colors1_</span><span class="p">,</span> <span class="n">colors2_</span><span class="p">))</span>
+	<span class="c1">#keep a minimum amount of genetic material from parent 1, according to indgen</span>
+
+	<span class="c1"># calculate feasibility fitness through self-intersection</span>
+	<span class="n">intersection_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">p_cross</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">p_cross</span><span class="p">)))</span>
+	<span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">p_cross</span><span class="p">):</span>
+		<span class="n">intersection_matrix</span><span class="p">[</span><span class="n">k</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">intersection</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">p_cross</span><span class="p">)</span>
+	<span class="c1">#remove self-intersection for each polygon</span>
+	<span class="n">intersection_events</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">intersection_matrix</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
+	<span class="n">fi_fitness</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">intersection_events</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">intersection_events</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+	<span class="n">offspring</span> <span class="o">=</span> <span class="n">Offspring</span><span class="p">(</span><span class="n">p_cross</span><span class="p">,</span> <span class="n">colors_cross</span><span class="p">,</span> <span class="n">hts_cross</span><span class="p">,</span> <span class="n">size1</span><span class="p">)</span>
+	<span class="n">offspring</span><span class="o">.</span><span class="n">fi_fitness</span> <span class="o">=</span> <span class="n">fi_fitness</span>
+
+	<span class="k">return</span> <span class="n">offspring</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="polynomial-bounded-mutation">
+<h2>polynomial_bounded_mutation<a class="headerlink" href="#polynomial-bounded-mutation" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">polynomial_bounded_mutation</span><span class="p">(</span><span class="n">ind</span><span class="p">,</span> <span class="n">cmap</span><span class="p">,</span> <span class="n">eta</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">low</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">up</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">mut_pb</span><span class="p">:</span> <span class="nb">float</span><span class="p">):</span>
+		<span class="sd">&quot;&quot;&quot;Return a polynomial bounded mutation, as defined in the original NSGA-II paper by Deb et al.</span>
+<span class="sd">		Mutations are applied directly on `individual`, which is then returned.</span>
+<span class="sd">		Inspired from code from the DEAP library (https://github.com/DEAP/deap/blob/master/deap/tools/mutation.py).</span>
+
+<span class="sd">		Parameters</span>
+<span class="sd">		----------</span>
+<span class="sd">		:param individual</span>
+<span class="sd">			The individual to mutate.</span>
+<span class="sd">		:param eta: float</span>
+<span class="sd">			Crowding degree of the mutation.</span>
+<span class="sd">			A high ETA will produce mutants close to its parent,</span>
+<span class="sd">			a small ETA will produce offspring with more differences.</span>
+<span class="sd">		:param low: float</span>
+<span class="sd">			Lower bound of the search domain.</span>
+<span class="sd">		:param up: float</span>
+<span class="sd">			Upper bound of the search domain.</span>
+<span class="sd">		:param mut_pb: float</span>
+<span class="sd">			The probability for each item of `individual` to be mutated.</span>
+<span class="sd">		&quot;&quot;&quot;</span>
+		<span class="n">mut_heights</span> <span class="o">=</span> <span class="n">copy</span><span class="p">(</span><span class="n">ind</span><span class="o">.</span><span class="n">heights</span><span class="p">)</span>
+		<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ind</span><span class="o">.</span><span class="n">heights</span><span class="p">)):</span>
+			<span class="k">if</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">mut_pb</span><span class="p">:</span>
+				<span class="n">x</span> <span class="o">=</span> <span class="n">ind</span><span class="o">.</span><span class="n">heights</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+				<span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="n">low</span><span class="p">):</span>
+					<span class="n">x</span><span class="o">=</span><span class="n">low</span>
+				<span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&gt;</span><span class="n">up</span><span class="p">):</span>
+					<span class="n">x</span><span class="o">=</span><span class="n">up</span>
+				<span class="n">delta_1</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">low</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">up</span> <span class="o">-</span> <span class="n">low</span><span class="p">)</span>
+				<span class="n">delta_2</span> <span class="o">=</span> <span class="p">(</span><span class="n">up</span> <span class="o">-</span> <span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">up</span> <span class="o">-</span> <span class="n">low</span><span class="p">)</span>
+				<span class="n">rand</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+				<span class="n">mut_pow</span> <span class="o">=</span> <span class="mf">1.</span> <span class="o">/</span> <span class="p">(</span><span class="n">eta</span> <span class="o">+</span> <span class="mf">1.</span><span class="p">)</span>
+
+				<span class="k">if</span> <span class="n">rand</span> <span class="o">&lt;</span> <span class="mf">0.5</span><span class="p">:</span>
+					<span class="n">xy</span> <span class="o">=</span> <span class="mf">1.</span> <span class="o">-</span> <span class="n">delta_1</span>
+					<span class="n">val</span> <span class="o">=</span> <span class="mf">2.</span> <span class="o">*</span> <span class="n">rand</span> <span class="o">+</span> <span class="p">(</span><span class="mf">1.</span> <span class="o">-</span> <span class="mf">2.</span> <span class="o">*</span> <span class="n">rand</span><span class="p">)</span> <span class="o">*</span> <span class="n">xy</span><span class="o">**</span><span class="p">(</span><span class="n">eta</span> <span class="o">+</span> <span class="mf">1.</span><span class="p">)</span>
+					<span class="n">delta_q</span> <span class="o">=</span> <span class="n">val</span><span class="o">**</span><span class="n">mut_pow</span> <span class="o">-</span> <span class="mf">1.</span>
+				<span class="k">else</span><span class="p">:</span>
+					<span class="n">xy</span> <span class="o">=</span> <span class="mf">1.</span> <span class="o">-</span> <span class="n">delta_2</span>
+					<span class="n">val</span> <span class="o">=</span> <span class="mf">2.</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.</span> <span class="o">-</span> <span class="n">rand</span><span class="p">)</span> <span class="o">+</span> <span class="mf">2.</span> <span class="o">*</span> <span class="p">(</span><span class="n">rand</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="n">xy</span><span class="o">**</span><span class="p">(</span><span class="n">eta</span> <span class="o">+</span> <span class="mf">1.</span><span class="p">)</span>
+					<span class="n">delta_q</span> <span class="o">=</span> <span class="mf">1.</span> <span class="o">-</span> <span class="n">val</span><span class="o">**</span><span class="n">mut_pow</span>
+
+				<span class="n">x</span> <span class="o">+=</span> <span class="n">delta_q</span> <span class="o">*</span> <span class="p">(</span><span class="n">up</span> <span class="o">-</span> <span class="n">low</span><span class="p">)</span>
+				<span class="n">x</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">low</span><span class="p">),</span> <span class="n">up</span><span class="p">)</span>
+				<span class="k">if</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
+					<span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">up</span><span class="p">)</span>
+				<span class="n">mut_heights</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span>
+
+		<span class="n">mut_colors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">util</span><span class="o">.</span><span class="n">height_to_color</span><span class="p">(</span><span class="n">cmap</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span> <span class="k">for</span> <span class="n">height</span> <span class="ow">in</span> <span class="n">mut_heights</span><span class="p">])</span>
+		<span class="n">offspring</span> <span class="o">=</span> <span class="n">Offspring</span><span class="p">(</span><span class="n">ind</span><span class="o">.</span><span class="n">polygons</span><span class="p">,</span> <span class="n">mut_colors</span><span class="p">,</span> <span class="n">mut_heights</span><span class="p">,</span> <span class="n">ind</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">ind</span><span class="o">.</span><span class="n">parent_ids</span><span class="p">)</span>
+
+		<span class="k">return</span> <span class="n">offspring</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="crossover-mutation">
+<h2>crossover_mutation<a class="headerlink" href="#crossover-mutation" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">crossover_mutation</span><span class="p">(</span><span class="n">ind1</span><span class="p">,</span> <span class="n">ind2</span><span class="p">,</span> <span class="n">eta</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">low</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">up</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">mut_pb</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">cross_pb</span><span class="p">:</span> <span class="s1">&#39;default&#39;</span><span class="p">):</span>
+		<span class="sd">&quot;&quot;&quot;Return a polynomial bounded mutation, on individuals produced from a uniform random crossover of 2 seed</span>
+<span class="sd">        individuals.</span>
+
+<span class="sd">		Parameters</span>
+<span class="sd">		----------</span>
+<span class="sd">		:param ind1, in2</span>
+<span class="sd">			The individuals to mutate.</span>
+<span class="sd">		:param eta: float</span>
+<span class="sd">			Crowding degree of the mutation.</span>
+<span class="sd">			A high ETA will produce mutants close to its parent,</span>
+<span class="sd">			a small ETA will produce offspring with more differences.</span>
+<span class="sd">		:param low: float</span>
+<span class="sd">			Lower bound of the search domain.</span>
+<span class="sd">		:param up: float</span>
+<span class="sd">			Upper bound of the search domain.</span>
+<span class="sd">		:param mut_pb: float</span>
+<span class="sd">			The probability for each item of `individual` to be mutated.</span>
+<span class="sd">		:param cross_pb: float</span>
+<span class="sd">			The probability for each item of `individual` to be crossed over.</span>
+<span class="sd">		&quot;&quot;&quot;</span>
+		<span class="n">mut_heights_1</span> <span class="o">=</span> <span class="n">copy</span><span class="p">(</span><span class="n">ind1</span><span class="o">.</span><span class="n">heights</span><span class="p">)</span>
+		<span class="n">mut_heights_2</span> <span class="o">=</span> <span class="n">copy</span><span class="p">(</span><span class="n">ind2</span><span class="o">.</span><span class="n">heights</span><span class="p">)</span>
+
+		<span class="c1"># crossover first</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">cross_pb</span> <span class="o">==</span> <span class="s1">&#39;default&#39;</span><span class="p">):</span>
+			<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ht</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">ind1</span><span class="o">.</span><span class="n">heights</span><span class="p">):</span>
+				<span class="k">if</span> <span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">ind1</span><span class="o">.</span><span class="n">heights</span><span class="p">)):</span>
+					<span class="n">mut_heights_1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">ind2</span><span class="o">.</span><span class="n">heights</span><span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ind2</span><span class="o">.</span><span class="n">heights</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)]</span>
+
+			<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ht</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">ind2</span><span class="o">.</span><span class="n">heights</span><span class="p">):</span>
+				<span class="k">if</span> <span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">ind2</span><span class="o">.</span><span class="n">heights</span><span class="p">)):</span>
+					<span class="n">mut_heights_2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">ind1</span><span class="o">.</span><span class="n">heights</span><span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ind1</span><span class="o">.</span><span class="n">heights</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)]</span>
+		<span class="k">else</span><span class="p">:</span>
+			<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ht</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">ind1</span><span class="o">.</span><span class="n">heights</span><span class="p">):</span>
+				<span class="k">if</span> <span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">cross_pb</span><span class="p">):</span>
+					<span class="n">mut_heights_1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">ind2</span><span class="o">.</span><span class="n">heights</span><span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ind2</span><span class="o">.</span><span class="n">heights</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)]</span>
+
+			<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ht</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">ind2</span><span class="o">.</span><span class="n">heights</span><span class="p">):</span>
+				<span class="k">if</span> <span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">cross_pb</span><span class="p">):</span>
+					<span class="n">mut_heights_2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">ind1</span><span class="o">.</span><span class="n">heights</span><span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">ind1</span><span class="o">.</span><span class="n">heights</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)]</span>
+
+		<span class="c1"># mutate after</span>
+		<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ind1</span><span class="o">.</span><span class="n">heights</span><span class="p">)):</span>
+			<span class="k">if</span> <span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">mut_pb</span><span class="p">):</span>
+				<span class="n">x</span> <span class="o">=</span> <span class="n">ind1</span><span class="o">.</span><span class="n">heights</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+				<span class="n">delta_1</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">low</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">up</span> <span class="o">-</span> <span class="n">low</span><span class="p">)</span>
+				<span class="n">delta_2</span> <span class="o">=</span> <span class="p">(</span><span class="n">up</span> <span class="o">-</span> <span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">up</span> <span class="o">-</span> <span class="n">low</span><span class="p">)</span>
+				<span class="n">rand</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+				<span class="n">mut_pow</span> <span class="o">=</span> <span class="mf">1.</span> <span class="o">/</span> <span class="p">(</span><span class="n">eta</span> <span class="o">+</span> <span class="mf">1.</span><span class="p">)</span>
+
+				<span class="k">if</span> <span class="n">rand</span> <span class="o">&lt;</span> <span class="mf">0.5</span><span class="p">:</span>
+					<span class="n">xy</span> <span class="o">=</span> <span class="mf">1.</span> <span class="o">-</span> <span class="n">delta_1</span>
+					<span class="n">val</span> <span class="o">=</span> <span class="mf">2.</span> <span class="o">*</span> <span class="n">rand</span> <span class="o">+</span> <span class="p">(</span><span class="mf">1.</span> <span class="o">-</span> <span class="mf">2.</span> <span class="o">*</span> <span class="n">rand</span><span class="p">)</span> <span class="o">*</span> <span class="n">xy</span><span class="o">**</span><span class="p">(</span><span class="n">eta</span> <span class="o">+</span> <span class="mf">1.</span><span class="p">)</span>
+					<span class="n">delta_q</span> <span class="o">=</span> <span class="n">val</span><span class="o">**</span><span class="n">mut_pow</span> <span class="o">-</span> <span class="mf">1.</span>
+				<span class="k">else</span><span class="p">:</span>
+					<span class="n">xy</span> <span class="o">=</span> <span class="mf">1.</span> <span class="o">-</span> <span class="n">delta_2</span>
+					<span class="n">val</span> <span class="o">=</span> <span class="mf">2.</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.</span> <span class="o">-</span> <span class="n">rand</span><span class="p">)</span> <span class="o">+</span> <span class="mf">2.</span> <span class="o">*</span> <span class="p">(</span><span class="n">rand</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="n">xy</span><span class="o">**</span><span class="p">(</span><span class="n">eta</span> <span class="o">+</span> <span class="mf">1.</span><span class="p">)</span>
+					<span class="n">delta_q</span> <span class="o">=</span> <span class="mf">1.</span> <span class="o">-</span> <span class="n">val</span><span class="o">**</span><span class="n">mut_pow</span>
+
+				<span class="n">x</span> <span class="o">+=</span> <span class="n">delta_q</span> <span class="o">*</span> <span class="p">(</span><span class="n">up</span> <span class="o">-</span> <span class="n">low</span><span class="p">)</span>
+				<span class="n">x</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">low</span><span class="p">),</span> <span class="n">up</span><span class="p">)</span>
+				<span class="n">mut_heights_1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span>
+
+		<span class="c1"># mutate after</span>
+		<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ind2</span><span class="o">.</span><span class="n">heights</span><span class="p">)):</span>
+			<span class="k">if</span> <span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">mut_pb</span><span class="p">):</span>
+				<span class="n">x</span> <span class="o">=</span> <span class="n">ind2</span><span class="o">.</span><span class="n">heights</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+				<span class="n">delta_1</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">low</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">up</span> <span class="o">-</span> <span class="n">low</span><span class="p">)</span>
+				<span class="n">delta_2</span> <span class="o">=</span> <span class="p">(</span><span class="n">up</span> <span class="o">-</span> <span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">up</span> <span class="o">-</span> <span class="n">low</span><span class="p">)</span>
+				<span class="n">rand</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+				<span class="n">mut_pow</span> <span class="o">=</span> <span class="mf">1.</span> <span class="o">/</span> <span class="p">(</span><span class="n">eta</span> <span class="o">+</span> <span class="mf">1.</span><span class="p">)</span>
+
+				<span class="k">if</span> <span class="n">rand</span> <span class="o">&lt;</span> <span class="mf">0.5</span><span class="p">:</span>
+					<span class="n">xy</span> <span class="o">=</span> <span class="mf">1.</span> <span class="o">-</span> <span class="n">delta_1</span>
+					<span class="n">val</span> <span class="o">=</span> <span class="mf">2.</span> <span class="o">*</span> <span class="n">rand</span> <span class="o">+</span> <span class="p">(</span><span class="mf">1.</span> <span class="o">-</span> <span class="mf">2.</span> <span class="o">*</span> <span class="n">rand</span><span class="p">)</span> <span class="o">*</span> <span class="n">xy</span><span class="o">**</span><span class="p">(</span><span class="n">eta</span> <span class="o">+</span> <span class="mf">1.</span><span class="p">)</span>
+					<span class="n">delta_q</span> <span class="o">=</span> <span class="n">val</span><span class="o">**</span><span class="n">mut_pow</span> <span class="o">-</span> <span class="mf">1.</span>
+				<span class="k">else</span><span class="p">:</span>
+					<span class="n">xy</span> <span class="o">=</span> <span class="mf">1.</span> <span class="o">-</span> <span class="n">delta_2</span>
+					<span class="n">val</span> <span class="o">=</span> <span class="mf">2.</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.</span> <span class="o">-</span> <span class="n">rand</span><span class="p">)</span> <span class="o">+</span> <span class="mf">2.</span> <span class="o">*</span> <span class="p">(</span><span class="n">rand</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">*</span> <span class="n">xy</span><span class="o">**</span><span class="p">(</span><span class="n">eta</span> <span class="o">+</span> <span class="mf">1.</span><span class="p">)</span>
+					<span class="n">delta_q</span> <span class="o">=</span> <span class="mf">1.</span> <span class="o">-</span> <span class="n">val</span><span class="o">**</span><span class="n">mut_pow</span>
+
+				<span class="n">x</span> <span class="o">+=</span> <span class="n">delta_q</span> <span class="o">*</span> <span class="p">(</span><span class="n">up</span> <span class="o">-</span> <span class="n">low</span><span class="p">)</span>
+				<span class="n">x</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">low</span><span class="p">),</span> <span class="n">up</span><span class="p">)</span>
+				<span class="n">mut_heights_2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span>
+
+
+		<span class="n">mut_colors_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">height_to_color</span><span class="p">(</span><span class="n">cmap</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span> <span class="k">for</span> <span class="n">height</span> <span class="ow">in</span> <span class="n">mut_heights_1</span><span class="p">])</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+		<span class="n">mut_colors_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">height_to_color</span><span class="p">(</span><span class="n">cmap</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span> <span class="k">for</span> <span class="n">height</span> <span class="ow">in</span> <span class="n">mut_heights_2</span><span class="p">])</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+		<span class="n">offspring_1</span> <span class="o">=</span> <span class="n">Offspring</span><span class="p">(</span><span class="n">ind1</span><span class="o">.</span><span class="n">polygons</span><span class="p">,</span> <span class="n">mut_colors_1</span><span class="p">,</span> <span class="n">mut_heights_1</span><span class="p">,</span> <span class="n">ind1</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">ind1</span><span class="o">.</span><span class="n">parent_ids</span><span class="p">)</span>
+		<span class="n">offspring_2</span> <span class="o">=</span> <span class="n">Offspring</span><span class="p">(</span><span class="n">ind2</span><span class="o">.</span><span class="n">polygons</span><span class="p">,</span> <span class="n">mut_colors_2</span><span class="p">,</span> <span class="n">mut_heights_2</span><span class="p">,</span> <span class="n">ind2</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">ind2</span><span class="o">.</span><span class="n">parent_ids</span><span class="p">)</span>
+
+		<span class="k">return</span> <span class="n">offspring_1</span><span class="p">,</span> <span class="n">offspring_2</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="classes.html" title="previous page">Classes</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Theodoros Galanos<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    
+  </body>
+</html>

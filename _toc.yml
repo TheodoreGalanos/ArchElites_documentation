@@ -1,0 +1,12 @@
+- file: introduction
+
+- part: Reference
+  chapters:
+  - file: Reference
+- part: Workflow
+  chapters:
+  - file: workflow
+- part: Source
+  chapters:
+  - file: classes
+  - file: functions
