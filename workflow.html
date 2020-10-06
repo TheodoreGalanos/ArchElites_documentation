@@ -1,0 +1,418 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Running an experiment &#8212; MAP-Elites for Architecture</title>
+    
+  <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.30270b6e4c972e43c488.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Classes" href="classes.html" />
+    <link rel="prev" title="Introduction" href="Reference.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">MAP-Elites for Architecture</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="introduction.html">
+   Overview
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Reference.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Reference.html#archelites-basics">
+   ArchElites Basics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Workflow
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Running an experiment
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Source
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="classes.html">
+   Classes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions.html">
+   Functions
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/workflow.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#generate-initial-population">
+   Generate Initial Population
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#set-experiment-parameters">
+   Set experiment parameters
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#config-ini">
+     config.ini
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#map-elite-step">
+   MAP-Elite Step
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="running-an-experiment">
+<h1>Running an experiment<a class="headerlink" href="#running-an-experiment" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="generate-initial-population">
+<h2>Generate Initial Population<a class="headerlink" href="#generate-initial-population" title="Permalink to this headline">¶</a></h2>
+<p>Currently there are two ways to acquire an initial population:</p>
+<ul class="simple">
+<li><p>Use Grasshopper and <a class="reference external" href="https://toolbox.decodingspaces.net/#aboutToolbox">DecodingSpaces</a> and generate a population with characteristics close to what the case study involves.</p></li>
+<li><p>Use real world shape files</p></li>
+</ul>
+<p>In both cases, the extent of the urban area should be 250 m x 250 m in order to comply with the pretrained model doing the inference. Currently, the buildings are scaled to 512x512 images (within GH, but that can also happen outside) in order to allow for more detailed heightmaps for the model.</p>
+</div>
+<div class="section" id="set-experiment-parameters">
+<h2>Set experiment parameters<a class="headerlink" href="#set-experiment-parameters" title="Permalink to this headline">¶</a></h2>
+<p>The parameters that detail each experiment can be set through the configuration file. An example file can be seen below.</p>
+<div class="section" id="config-ini">
+<h3>config.ini<a class="headerlink" href="#config-ini" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="k">[collection]</span>
+<span class="c1"># collection folder</span>
+<span class="na">input_dir</span> <span class="o">=</span> <span class="s">F:\PhD_Research\Output\CaseStudies\MAP-Elites\experiments\real_world\NewYork\data</span>
+<span class="c1"># color map file</span>
+<span class="na">color_file</span> <span class="o">=</span> <span class="s">F:\PhD_Research\Output\CaseStudies\MAP-Elites\experiments\real_world\NewYork\color_map.csv</span>
+<span class="c1"># number of parameters in the generative model, used only for GH-generated individuals</span>
+<span class="na">n_genes</span> <span class="o">=</span> <span class="s">5</span>
+<span class="c1"># number of pairs to create when selecting by distance, used only for GH-generated individuals</span>
+<span class="na">n_pairs</span> <span class="o">=</span> <span class="s">5</span>
+<span class="c1"># boundary domain size for individuals in m x m, should be equal to the size of the bounding box the individuals were created in.</span>
+<span class="na">size_x</span> <span class="o">=</span> <span class="s">512</span>
+<span class="na">size_y</span> <span class="o">=</span> <span class="s">512</span>
+
+<span class="k">[mapelites]</span>
+<span class="c1"># random seed</span>
+<span class="na">seed</span> <span class="o">=</span> <span class="s">59</span>
+<span class="c1"># number of initial random samples: how many individuals to seed the map with</span>
+<span class="na">bootstrap_individuals</span> <span class="o">=</span> <span class="s">1500</span>
+<span class="c1"># number of map elites iterations: how many generations to run</span>
+<span class="na">iterations</span> <span class="o">=</span> <span class="s">100</span>
+<span class="c1"># number of curious individuals to select from: the number of most curious individuals to select during evolution</span>
+<span class="na">n_curious</span> <span class="o">=</span> <span class="s">50</span>
+<span class="c1"># True: solve a minimization problem. False: solve a maximization problem</span>
+<span class="na">minimization</span> <span class="o">=</span> <span class="s">False</span>
+<span class="c1"># show the plot or not at the end</span>
+<span class="na">interactive</span> <span class="o">=</span> <span class="s">False</span>
+
+<span class="k">[plotting]</span>
+<span class="c1"># Set to true to highlight the best fitness value in the final plot</span>
+<span class="na">highlight_best</span> <span class="o">=</span> <span class="s">True</span>
+
+<span class="k">[quality_diversity]</span>
+<span class="c1"># Define the quality function.</span>
+<span class="na">name</span> <span class="o">=</span> <span class="s">&#39;percentage of dangerous zones&#39;</span>
+<span class="c1"># Define the behavioral dimensions</span>
+<span class="na">dimensions</span> <span class="o">=</span> <span class="s">fsi,gsi,osr,mh,tare,dangerous,sitting</span>
+<span class="c1"># Define which behavioral dimensions will be used for the experiment</span>
+<span class="na">n_bins</span> <span class="o">=</span> <span class="s">5,6</span>
+<span class="c1"># Define the discretization for each behavioral dimension</span>
+<span class="na">step_fsi</span> <span class="o">=</span> <span class="s">0.16</span>
+<span class="na">step_gsi</span> <span class="o">=</span> <span class="s">0.014</span>
+<span class="na">step_osr</span> <span class="o">=</span> <span class="s">0.02</span>
+<span class="na">step_mh</span> <span class="o">=</span> <span class="s">0.5</span>
+<span class="na">step_tare</span> <span class="o">=</span> <span class="s">0.025</span>
+<span class="na">step_dangerous</span> <span class="o">=</span> <span class="s">1250</span>
+<span class="na">step_sitting</span> <span class="o">=</span> <span class="s">1250</span>
+<span class="c1"># Define heatmap bins for feature dimensions</span>
+<span class="c1"># Name each bin as `bin_{name of behavioral dimension}</span>
+<span class="c1"># Note: The bins must be defined by numbers, except for the `inf` label which can be defined ether at the beginning or at the end of the bins.</span>
+<span class="na">bin_FSI</span> <span class="o">=</span> <span class="s">-inf,0,8,inf</span>
+<span class="na">bin_GSI</span> <span class="o">=</span> <span class="s">-inf,0,0.7,inf</span>
+<span class="na">bin_OSR</span> <span class="o">=</span> <span class="s">-inf,0,1,inf</span>
+<span class="na">bin_MH</span> <span class="o">=</span> <span class="s">-inf,0,25,inf</span>
+<span class="na">bin_TARE</span> <span class="o">=</span> <span class="s">-inf,0.25,1.0,inf</span>
+<span class="na">bin_dangerous</span> <span class="o">=</span> <span class="s">-inf,0,62500,inf</span>
+<span class="na">bin_sitting</span> <span class="o">=</span> <span class="s">-inf,0,62500,inf</span>
+
+<span class="k">[crossover]</span>
+<span class="c1">#indgen: float(0,1), amount of genetic material to keep from parent 1.</span>
+<span class="na">indgen</span> <span class="o">=</span> <span class="s">0.5</span>
+<span class="c1">#indprob: float(0,1), probability for each building polygon to be kept.</span>
+<span class="na">indpb</span> <span class="o">=</span> <span class="s">0.5</span>
+
+<span class="k">[mutation]</span>
+<span class="c1">#eta: float, highest values keep mutations close to parent individual</span>
+<span class="na">eta</span> <span class="o">=</span> <span class="s">20.0</span>
+<span class="c1">#low: float, lowest possible building height</span>
+<span class="na">low</span> <span class="o">=</span> <span class="s">5.0</span>
+<span class="c1">#up: float, highest possible building height</span>
+<span class="na">up</span> <span class="o">=</span> <span class="s">100.0</span>
+<span class="c1">#mut_pb: float(0,1), the probability for each building to be mutated</span>
+<span class="na">mut_pb</span> <span class="o">=</span> <span class="s">0.25</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="map-elite-step">
+<h2>MAP-Elite Step<a class="headerlink" href="#map-elite-step" title="Permalink to this headline">¶</a></h2>
+<p>After initialization, the whole run can be described as follows:</p>
+<div class="highlight-pseudocode notranslate"><div class="highlight"><pre><span></span>for i in iterations:
+	for j in generated_individuals:
+		select n_curious individuals
+		select 2 individuals from n_curios at random
+		create offspring through crossover
+		mutate offspring through mutation
+		run inference()
+		wind_comfort()
+		x, y = map_to_grid()
+		if (offspring.performance &gt; grid[x,y]):
+			add offspring to grid
+			save_to_disk()
+		else:
+			discard offspring
+	plot_heatmap()
+save_performances()
+save_curiosity_score()
+</pre></div>
+</div>
+<p>Each generation typically runs for 250-500 individuals, depending on the map 30,000-100,000 evaluations are possible. The feasible-infeasible crossover has not been tested yet, however it would involve the addition of another population of individuals (so no discarding) and a step of decreasing their fitness (with fitness=0 meaning they are now feasible) at each iteration.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="Reference.html" title="previous page">Introduction</a>
+    <a class='right-next' id="next-link" href="classes.html" title="next page">Classes</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Theodoros Galanos<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    
+  </body>
+</html>

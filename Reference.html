@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction &#8212; MAP-Elites for Architecture</title>
+    
+  <link rel="stylesheet" href="_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.bfb7730f9caf2ec0b46a44615585038c.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.30270b6e4c972e43c488.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.be0a4a0c39cd630af62a2fcf693f3f06.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Running an experiment" href="workflow.html" />
+    <link rel="prev" title="Overview" href="introduction.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">MAP-Elites for Architecture</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="introduction.html">
+   Overview
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="#archelites-basics">
+   ArchElites Basics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Workflow
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="workflow.html">
+   Running an experiment
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Source
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="classes.html">
+   Classes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions.html">
+   Functions
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Reference.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#archelites-basics">
+   ArchElites Basics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#population">
+     Population
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operators">
+     Operators
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#geometry">
+     Geometry
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#evaluation">
+     Evaluation
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inference">
+     Inference
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#utilities">
+     Utilities
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bibliography">
+     Bibliography
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>The structure of ArchElites can be seen by the organization of its source code. The library provides classes for building individual designs and a collection of designs either from a seed population or from evolved individuals. Currently only geometric primitives are supported as genomes, specifically each individual requires a list of points, along with number of points in each polygon, and a list of heights. IO routines are provided to read a collection of individuals from disk and also save an offspring to disk during evolution. Each individual has a drawing method that allows for exporting a heightmap, which is currently used for performance evaluation. Finally, evaluation happens by contacting a pretrained model which is deployed in a simple format through sockets.</p>
+<p>Classes are named using <code class="docutils literal notranslate"><span class="pre">CamelCase</span></code> (capital letters at the start of each word). functions, methods and variable names are <code class="docutils literal notranslate"><span class="pre">lower_case_underscore</span></code> (lowercase with an underscore representing a space between words).</p>
+</div>
+<div class="section" id="archelites-basics">
+<h1>ArchElites Basics<a class="headerlink" href="#archelites-basics" title="Permalink to this headline">¶</a></h1>
+<p>After starting Python, import the archelites module with</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">arch_elites</span> <span class="k">as</span> <span class="nn">ae</span> 
+</pre></div>
+</div>
+<div class="section" id="population">
+<h2>Population<a class="headerlink" href="#population" title="Permalink to this headline">¶</a></h2>
+<p>The following basic individual classes are provided as Python classes:</p>
+<dl class="simple myst">
+<dt><span class="xref myst">Collection</span>:</dt><dd><p>A class to create a collection of individuals based on genetic information that is either extracted from the generative grasshopper model or from local files describing each individual design.</p>
+</dd>
+<dt><span class="xref myst">Individual</span>:</dt><dd><p>A class to create an individual, along with its properties, out of a collection.</p>
+</dd>
+<dt><span class="xref myst">Offspring</span>:</dt><dd><p>A class to create an offspring, along with its properties, from evolution (crossover and/or mutation) of 2 or more individuals.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="operators">
+<h2>Operators<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h2>
+<p>The following basic evolutionary operators are provided as Python functions:</p>
+<dl class="simple myst">
+<dt><span class="xref myst">crossover</span>:</dt><dd><p>A function that executes crossover of genetic material between two Individuals or Offspring according to a crossover probability <strong>cross_prob</strong> and a required amount of genetic material from target individual <strong>cross_gen</strong>.</p>
+</dd>
+<dt><span class="xref myst">fi_crossover</span>:</dt><dd><p>A function that executes feasible-infeasible style crossover of genetic material between two Individuals or Offspring according to a crossover probability <strong>cross_prob</strong>. The class returns an individual with a feasible-infeasible fitness <strong>fi_fitness</strong> which corresponds to the number of intersections in its genetic material (polygons).</p>
+</dd>
+<dt><span class="xref myst">polynomial_bounded_mutation</span>:</dt><dd><p>A function that defines polynomial bounded mutation, as defined in <a class="bibtex reference internal" href="introduction.html#deb2002" id="id1">[DebPratapAgarwalMeyarivan02]</a>. Mutations are applied directly to the individual, which is then returned as output.</p>
+</dd>
+<dt><span class="xref myst">crossover_mutation</span>:</dt><dd><p>A function that defines a random uniform crossover and polynomial bounded mutation on two input individuals. Mutations are applied directly to both individuals, which are then returned as output.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="geometry">
+<h2>Geometry<a class="headerlink" href="#geometry" title="Permalink to this headline">¶</a></h2>
+<p>A collection of functions that create, adjust or evaluate geometric primitives. The utilities currently implemented are:</p>
+<dl class="simple myst">
+<dt><span class="xref myst">create_path</span>:</dt><dd><p>A function that splits a list of points into an array of (x, y) coordinates.</p>
+</dd>
+<dt><span class="xref myst">create_shapely_polygons</span>:</dt><dd><p>A function that generates shapely polygons out of points and splits (indices indicating where a list of points is split into polygons) of an individual.</p>
+</dd>
+<dt><span class="xref myst">find_intersections</span>:</dt><dd><p>A function that finds intersections between a seed source polygon and a list of target polygons.</p>
+</dd>
+<dt><span class="xref myst">centroids</span>:</dt><dd><p>A function that calculates the centroids of a collection of polygons.</p>
+</dd>
+<dt><span class="xref myst">get_features</span>:</dt><dd><p>A function that calculates features for an individual. Currently supported features are:</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>floor space index (FSI): gross floor area / area of aggregation</p></li>
+<li><p>ground space index (GSI): footprint / area of aggregation</p></li>
+<li><p>open space ratio (OSR): (1-GSI)/FSI</p></li>
+<li><p>building height (L): FSI/GSI</p></li>
+<li><p>tare (T): (area of aggregation - footprint) / area of aggregation</p></li>
+</ul>
+<dl class="simple myst">
+<dt><span class="xref myst">draw_polygons</span>:</dt><dd><p>A function that outputs an image heightmap of an individual design.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="evaluation">
+<h2>Evaluation<a class="headerlink" href="#evaluation" title="Permalink to this headline">¶</a></h2>
+<p>Functions that evaluate performance for each individual. The current performance metric implemented is pedestrian wind comfort, which is evaluated according to the internationally accepted Lawson classification (see image, just for reference).</p>
+<p><img alt="lawson criteria graph" src="https://clqtg10snjb14i85u49wifbv-wpengine.netdna-ssl.com/wp-content/uploads/2020/01/lawson-graph-1-option-3-lines.png" /></p>
+<dl class="simple myst">
+<dt><span class="xref myst">wind_comfort</span>:</dt><dd><p>A function that calculates pedestrian wind comfort for an input individual, based on the result of the inference that was received from the pretrained model.</p>
+</dd>
+</dl>
+<div class="highlight-[notes] notranslate"><div class="highlight"><pre><span></span>Currently, only two categories are calculated by the wind_comfort function: 
+sitting long and uncomfortable.
+</pre></div>
+</div>
+</div>
+<div class="section" id="inference">
+<h2>Inference<a class="headerlink" href="#inference" title="Permalink to this headline">¶</a></h2>
+<p>Function that handles the communication with the pretrained model, sending the necessary input and receiving the output evaluation for each individual.</p>
+<dl class="simple myst">
+<dt><span class="xref myst">run_inference</span>:</dt><dd><p>A function to run inference on the (locally) deployed pretrained model.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="utilities">
+<h2>Utilities<a class="headerlink" href="#utilities" title="Permalink to this headline">¶</a></h2>
+<p>A collection of useful utilities that are used throughout the library for specific tasks.</p>
+<dl class="simple myst">
+<dt><span class="xref myst">genetic_similarity</span>:</dt><dd><p>A function that calculates similarity between individuals created in Grasshopper, using information concerning design input parameters saved in each individual’s naming convention. Currently uses cosine similarity.</p>
+</dd>
+<dt><span class="xref myst">diverse_pairs</span>:</dt><dd><p>A function that outputs indices of a specified number of individuals that are as different as possible from the input individual, based on their genetic similarity.</p>
+</dd>
+<dt><span class="xref myst">create_map</span>:</dt><dd><p>A function that creates an RGB color map out of an input list of color values.</p>
+</dd>
+<dt><span class="xref myst">height_to_color</span>:</dt><dd><p>A function that translates a building height value to a color, based on the given color map.</p>
+</dd>
+<dt><span class="xref myst">draw_polygons</span>:</dt><dd><p>A function that outputs a PIL image of a collection of polygons and colors.</p>
+</dd>
+<dt><span class="xref myst">plot_heatmap</span>:</dt><dd><p>A function that saves a plot of the the MAP-Elites grid map.</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The current implementation is quite brittle and extremely specific to the domain and case studies involved! Focus for the near future is to make it work for a more general classes of inputs (e.g. JSON or geoJSON schemas).</p>
+</div>
+</div>
+<div class="section" id="bibliography">
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
+<p id="bibtex-bibliography-Reference-0"><dl class="citation">
+<dt class="bibtex label" id="deb2002"><span class="brackets"><a class="fn-backref" href="#id1">DebPratapAgarwalMeyarivan02</a></span></dt>
+<dd><p>K. Deb, A. Pratap, S. Agarwal, and T. Meyarivan. A fast and elitist multiobjective genetic algorithm: nsga-ii. <em>IEEE Transactions on Evolutionary Computation</em>, 6(2):182–197, 2002.</p>
+</dd>
+</dl>
+</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="introduction.html" title="previous page">Overview</a>
+    <a class='right-next' id="next-link" href="workflow.html" title="next page">Running an experiment</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Theodoros Galanos<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    
+  </body>
+</html>
